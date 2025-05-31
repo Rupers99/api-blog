@@ -5,6 +5,7 @@ import jwt
 from datetime import datetime, timedelta
 from functools import wraps
 # Rota padrão - GET https://localhost:5000
+#aa
 
 def token_obrigatorio(f):
     @wraps(f)
