@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'ASD123'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Silva.5014@db.ixozgvlfpnkgjzngonkl.supabase.co:5432/postgres'
 
 db = SQLAlchemy(app)
 db:SQLAlchemy
@@ -30,7 +30,7 @@ def inicializar_banco():
         db.create_all()
 
         autor = Autor(nome='Luciano', email='luciano@gmail.com', 
-                      senha='Silva.5014', admin=True)
+                      senha='12345', admin=True)
         
         db.session.add(autor)
         db.session.commit()
